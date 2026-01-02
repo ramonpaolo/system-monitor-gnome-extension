@@ -13,9 +13,9 @@ wget -O /tmp/extension.zip "$EXTENSION_URL"
 # Extract the content
 unzip /tmp/extension.zip -d /tmp/
 
-# Move to the extensions directory
-EXT_NAME=$(ls /tmp/*-main | xargs basename)
-cp -r "/tmp/$EXT_NAME" ~/.local/share/gnome-shell/extensions/
+rm -rf /tmp/extension.zip
+
+mv "/tmp/system-monitor-gnome-extension-main" ~/.local/share/gnome-shell/extensions/system-monitor@system-monitor.com
 
 # Restart GNOME Shell
 echo "Restarting GNOME Shell..."
