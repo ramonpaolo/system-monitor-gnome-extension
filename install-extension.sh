@@ -1,24 +1,31 @@
 #!/bin/bash
 
-# Script para instalar a extensão GNOME Shell
-echo "Baixando e instalando a extensão GNOME Shell..."
+# Script to install the GNOME Shell extension
+echo "Downloading and installing the GNOME Shell extension..."
 
-# Criar diretório de extensões se não existir
+# Create extensions directory if it doesn't exist
 mkdir -p ~/.local/share/gnome-shell/extensions
 
-# Baixar a extensão (substitua pela URL real da extensão)
+# Download the extension (replace with the actual extension URL)
 EXTENSION_URL="https://github.com/ramonpaolo/system-monitor-gnome-extension/archive/main.zip"
 wget -O /tmp/extension.zip "$EXTENSION_URL"
 
-# Extrair o conteúdo
+# Extract the content
 unzip /tmp/extension.zip -d /tmp/
 
-# Mover para o diretório de extensões
+# Move to the extensions directory
 EXT_NAME=$(ls /tmp/*-main | xargs basename)
 cp -r "/tmp/$EXT_NAME" ~/.local/share/gnome-shell/extensions/
 
-# Reiniciar GNOME Shell
-echo "Reiniciando GNOME Shell..."
+# Restart GNOME Shell
+echo "Restarting GNOME Shell..."
 killall gnome-shell
 
-echo "Extensão instalada com sucesso!"
+echo "Extension installed successfully!"
+
+echo "Enabling the extension..."
+
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
+
+gnome-extensions enable system-monitor@system-monitor.com
