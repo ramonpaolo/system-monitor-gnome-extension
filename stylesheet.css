@@ -1,0 +1,35 @@
+/* stylesheet.css */
+.system-info-layout {
+    spacing: 6px;
+    padding: 4px;
+}
+
+.system-info-icon {
+    icon-size: 16px;
+    color: #888888;
+}
+
+.system-info-label {
+    font-size: 16px;
+    color: #888888;
+    text-align: center;
+}
+
+/* Agrupamento visual por tipo de informação */
+.cpu-group {
+    background-color: rgba(139, 69, 19, 0.1);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+.gpu-group {
+    background-color: rgba(30, 144, 255, 0.1);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+.memory-group {
+    background-color: rgba(50, 205, 50, 0.1);
+    border-radius: 4px;
+    padding: 2px 6px;
+}

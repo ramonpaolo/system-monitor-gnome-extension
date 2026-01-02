@@ -1,0 +1,7 @@
+{
+    "name": "System Monitor",
+    "description": "Monitor de sistema para exibir informações como CPU, GPU e memória na barra de tarefas",
+    "uuid": "system-monitor@system-monitor.com",
+    "version": 1,
+    "shell-version": ["42", "43", "44", "45", "46"]
+}
