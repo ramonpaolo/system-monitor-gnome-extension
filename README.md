@@ -18,9 +18,9 @@ This GNOME extension displays 5 key metrics at the top of Ubuntu:
 - Easy to install and use
 
 ### Installation
-1. Clone this repository
-2. Run `make install`
-3. Restart GNOME Shell (Alt+F2, type 'r', press Enter)
+1. Download the `install-extension.sh` file
+2. Give execute permission: `sudo chmod +x install-extension.sh`
+3. Run the script: `./install-extension.sh`
 
 ### Requirements
 - GNOME 40+
@@ -66,9 +66,9 @@ Esta extensão do GNOME exibe 5 métricas importantes no topo do Ubuntu:
 - Fácil instalação e uso
 
 ### Instalação
-1. Clone este repositório
-2. Execute `make install`
-3. Reinicie o GNOME Shell (Alt+F2, digite 'r', pressione Enter)
+1. Baixe o arquivo `install-extension.sh`
+2. Dê permissão de execução: `sudo chmod +x install-extension.sh`
+3. Execute o script: `./install-extension.sh`
 
 ### Requisitos
 - GNOME 40+
